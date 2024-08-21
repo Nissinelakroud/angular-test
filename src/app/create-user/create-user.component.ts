@@ -4,6 +4,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
+import { UserService } from '../user.service';
 import {MatButtonModule} from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select'; 
 import { CommonModule } from '@angular/common';
@@ -11,9 +12,9 @@ import { Router ,ActivatedRoute } from '@angular/router';
 import { FormBuilder} from '@angular/forms'; 
 import { User } from '../models/user.model';
 import {ErrorStateMatcher} from '@angular/material/core';
-import { UserService } from '../services/user.service';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
-
+import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core'; 
+import { RouterOutlet } from '@angular/router'; 
 @Component({
   selector: 'app-create-user',
   standalone: true,
@@ -24,8 +25,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
     ReactiveFormsModule,
     MatButtonModule ,
      MatSelectModule , 
-     CommonModule,
-     TranslateModule
+     CommonModule  , RouterOutlet , TranslateModule 
   ],
   templateUrl: './create-user.component.html',
   styleUrls: ['./create-user.component.css'] 
@@ -47,10 +47,10 @@ export class CreateUserComponent implements OnInit {
   ];
   constructor(
     private userService: UserService,
-    private router: Router , 
-    private route : ActivatedRoute ,
+    private router: Router, 
+    private route: ActivatedRoute,
     private formBuilder: FormBuilder,
-    private translate: TranslateService
+    private translate: TranslateService // Ajout du TranslateService
   ) {
     translate.addLangs(['en']); // Ajouter uniquement la langue souhaitée
     translate.setDefaultLang('en'); // Définir la langue par défaut
@@ -64,7 +64,7 @@ export class CreateUserComponent implements OnInit {
         lastName: ['', [Validators.required]],
         address: [''], 
         email: ['', [Validators.required, Validators.email]] ,
-        telephone: [''] , 
+        telephone: ['', [Validators.pattern(/^6\d{8}$/)]], 
         ville: ['']
     });
 

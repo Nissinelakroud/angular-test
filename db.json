@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "firstName": "El Akroud",
+      "lastName": "Nisrine",
+      "address": "rabatville ajhueleiw",
+      "email": "test@gmail.com",
+      "telephone": "0773854846",
+      "ville": "casablanca",
+      "id": "1362"
+    },
+    {
+      "id": "a75c",
+      "firstName": "nisseee",
+      "lastName": "nissrina",
+      "address": "hhghhg",
+      "email": "abc@gmail.com",
+      "telephone": "0600298034",
+      "ville": "marrakech"
+    },
+    {
+      "firstName": "salama",
+      "lastName": "amarani",
+      "address": "agadir oufala",
+      "email": "salam@gmail.com",
+      "telephone": "600298033",
+      "ville": "casablanca",
+      "id": "7673"
+    },
+    {
+      "id": "455d",
+      "firstName": "adam",
+      "lastName": "berrada",
+      "address": "hay el ossra",
+      "email": "adam@gmail.com",
+      "telephone": "600000000",
+      "ville": "casablanca"
+    }
+  ]
+}

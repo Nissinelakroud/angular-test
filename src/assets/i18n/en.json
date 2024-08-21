@@ -1,4 +1,12 @@
 {
-    "TITLE": "Hello World!",
-    "app_name": "Mon application"
+    "TITLE": "Formulaire Contact",
+    "firstName": "FirstName" ,
+    "lastName": "LastName" , 
+    "telephone": "NumberPhone" ,
+    "adress": "Adress" ,
+    "email": "email" ,
+    "ville" : "City" ,
+    "action" : "action" , 
+    "delete": "delete" ,
+     "edit" : "edit"
 }
