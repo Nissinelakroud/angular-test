@@ -64,7 +64,7 @@ export class CreateUserComponent implements OnInit {
         lastName: ['', [Validators.required]],
         address: [''], 
         email: ['', [Validators.required, Validators.email]] ,
-        telephone: ['', [Validators.pattern(/^6\d{8}$/)]], 
+        telephone: ['', [Validators.pattern(/^06\d{8}$/)]], 
         ville: ['']
     });
 
